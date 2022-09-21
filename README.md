@@ -1,11 +1,12 @@
-# Payline SDK 
+# Payline SDK
 
 *This is an unofficial repository*
 
 ## Installation
 
 ```shell script
-npm i --save @playmoweb/payline-typescript-sdk
+npm i --save @yhnlvy/payline-typescript-sdk
+yarn add @yhnlvy/payline-typescript-sdk
 ```
 
 ## Basic usage
@@ -19,7 +20,7 @@ import {
   PaylineAction,
   PaylineDeliveryMode,
   PaylineMode,
-} from "payline-typescript-sdk";
+} from "@yhnlvy/payline-typescript-sdk";
 
 // prepare payline configuration
 const isProduction = false;
@@ -41,7 +42,7 @@ paylineWebService.doWebPayment(doWebPaymentRequest);
 ```
 
 ```typescript
-import {PaylineWalletManagement} from "payline-typescript-sdk";
+import { PaylineWalletManagement } from "@yhnlvy/payline-typescript-sdk";
 
 // if you need wallet endpoints you need to instantiate the service with the payline config instance
 const paylineWalletService = new PaylineWalletManagement(paylineConfig);
@@ -63,4 +64,3 @@ manageWebWallet()
 // PaylinePaymentManagement
 doRefundRequest()
 ```
-

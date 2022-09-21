@@ -1,12 +1,12 @@
 {
-  "name": "@playmoweb/payline-typescript-sdk",
+  "name": "@yhnlvy/payline-typescript-sdk",
   "version": "1.1.5",
   "description": "Payline Typescript SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Thibaud Giovannetti",
   "repository": {
-    "url": "https://github.com/playmoweb/payline-typescript-sdk"
+    "url": "https://github.com/yhnlvy/payline-typescript-sdk"
   },
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "crypto-random-string": "4.0.0",
+    "crypto-random-string": "3.3.1",
     "moment-timezone": "0.5.34",
     "soap": "0.43.0"
   },
