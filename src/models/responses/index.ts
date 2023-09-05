@@ -9,3 +9,4 @@ export {PaylineCreateWebWalletResponse} from "./payline-create-web-wallet-respon
 export {PaylineDoRefundResponse} from "./payline-do-refund-response";
 export {PaylineDoAuthorizationResponse} from "./payline-do-authorization-response";
 export {PaylineGetTransactionDetailsResponse} from "./payline-get-transaction-details-response";
+export {PaylineGetCardsResponse} from "./payline-get-cards-response";

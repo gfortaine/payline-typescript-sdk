@@ -1,7 +1,7 @@
 import cryptoRandomString from "crypto-random-string";
 import {Payline} from "../payline";
-import {PaylineCreateWalletRequest, PaylineDoImmediateWalletPaymentRequest, PaylineDoScheduledWalletPaymentRequest, PaylineUpdateWalletRequest} from "../../models/requests";
-import {PaylineCreateWalletResponse, PaylineDoImmediateWalletPaymentResponse, PaylineDoScheduledWalletPaymentResponse, PaylineUpdateWalletResponse} from "../../models/responses";
+import {PaylineCreateWalletRequest, PaylineDoImmediateWalletPaymentRequest, PaylineDoScheduledWalletPaymentRequest, PaylineUpdateWalletRequest, PaylineGetCardsRequest} from "../../models/requests";
+import {PaylineCreateWalletResponse, PaylineDoImmediateWalletPaymentResponse, PaylineDoScheduledWalletPaymentResponse, PaylineUpdateWalletResponse, PaylineGetCardsResponse} from "../../models/responses";
 
 /**
  * Manage payline wallets
@@ -41,6 +41,14 @@ class PaylineWalletManagement {
     request.changeContractNumber(this.payline.getContractNumber());
     request.order.ref = request.order.ref + cryptoRandomString({length: 16, type: "base64"});
     return this.payline.execAndCatch("doScheduledWalletPayment", request);
+  }
+
+  /**
+   * Get cards request
+   */
+  public getCards(request: PaylineGetCardsRequest): Promise<PaylineGetCardsResponse> {
+    request.changeContractNumber(this.payline.getContractNumber());
+    return this.payline.execAndCatch("getCards", request);
   }
 
 }
