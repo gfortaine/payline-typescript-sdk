@@ -9,6 +9,17 @@ npm i --save @yhnlvy/payline-typescript-sdk
 yarn add @yhnlvy/payline-typescript-sdk
 ```
 
+## Test
+
+```shell
+npm run build
+node sandbox.js
+```
+
+## Publish to npm
+
+- [A better npm publish](https://github.com/sindresorhus/np)
+
 ## Basic usage
 
 ```typescript
